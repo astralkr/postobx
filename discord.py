@@ -1,6 +1,8 @@
 import discord
+import os
 
 client = discord.Clinet()
+
 
 @client.event
 async def on_ready():
@@ -20,3 +22,6 @@ async def on_message(message):
         author = message.guild.get_member(int(message.content[4:22]))
         msg = message.content[23:]
         await author.send(msg)
+
+access_token = os.environ["BOT_TOKEN"]
+cleint.run('access_token')
