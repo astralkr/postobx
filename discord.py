@@ -3,6 +3,9 @@ import os
 
 client = discord.Client()
 
+access_token = os.environ["BOT_TOKEN"]
+cleint.run('access_token')
+
 
 @client.event
 async def on_ready():
@@ -23,5 +26,3 @@ async def on_message(message):
         msg = message.content[23:]
         await author.send(msg)
 
-access_token = os.environ["BOT_TOKEN"]
-cleint.run('access_token')
