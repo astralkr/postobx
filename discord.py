@@ -14,8 +14,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if client.private_channels and message.author.id != (707085039959146516):
-        await client.get_channel(707089326781104179).send(message.author.name + "(" + str(message.author.id) + "): " + message.content)
+    if client.private_channels and message.author.id != "707085039959146516":
+        await client.get_channel("707089326781104179").send(message.author.name + "(" + str(message.author.id) + "): " + message.content)
 
 
     if message.content.startswith("/DM"):
